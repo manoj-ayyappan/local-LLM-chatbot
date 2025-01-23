@@ -15,5 +15,16 @@ model = OllamaLLM(model="llama3.2")
 prompt = ChatPromptTemplate.from_template(template)
 chain = prompt | model
 
-result = chain.invoke({"context":"", "question": "Who is the president of the US?"})
-print(result)
+def handle_conversation():
+    context = ""
+    print("Welcome to the AI chatbot. Type 'exit' to quit")
+    while True:
+        user_input =  input("You: ")
+        if user_input.lower() == "exit":
+            break
+        result = chain.invoke({"context":context, "question": user_input})
+        print("AI response: ", result)
+        context += f"\n User = {user_input} \n AI: {result}" 
+
+if __name__ == "__main__":
+    handle_conversation()
