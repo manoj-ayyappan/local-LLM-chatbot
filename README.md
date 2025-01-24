@@ -16,8 +16,8 @@ This project demonstrates a simple chatbot built using the [LangChain](https://g
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/local-llm-chatbot.git
-   cd local-llm-chatbot
+   git clone https://github.com/manoj-ayyappan/local-LLM-chatbot.git
+   cd local-LLM-chatbot
    python3 -m venv venv
 
 2. Set up a virtual environment (recommended):
